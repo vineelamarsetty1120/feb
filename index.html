@@ -2,93 +2,100 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Private</title>
 
 <style>
-  * {
-    box-sizing: border-box;
-    font-family: 'Georgia', serif;
-  }
+* {
+  box-sizing: border-box;
+  font-family: "Georgia", serif;
+}
 
-  body {
-    margin: 0;
-    min-height: 100vh;
-    background: radial-gradient(circle at center, #3a0f1f, #0b0206);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #f5eaea;
-  }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at center, #3a0f1f, #0b0206);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f5eaea;
+  padding: 20px;
+}
 
+/* Bigger Card */
+.box {
+  width: 100%;
+  max-width: 520px;
+  padding: 50px 40px;
+  background: rgba(20, 5, 10, 0.88);
+  border-radius: 30px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.75);
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.box h2 {
+  font-size: 26px;
+  margin-bottom: 30px;
+  letter-spacing: 0.5px;
+}
+
+/* Input */
+input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  margin-bottom: 18px;
+  text-align: center;
+  outline: none;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  background: #ff4d6d;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #ff2e5f;
+}
+
+.error {
+  margin-top: 15px;
+  color: #ff9aa9;
+  display: none;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
   .box {
-    background: rgba(20, 5, 10, 0.85);
-    padding: 45px 35px;
-    border-radius: 25px;
-    width: 90%;
-    max-width: 420px;
-    text-align: center;
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+    padding: 45px 30px;
   }
-
-  h2 {
-    margin: 0 0 25px 0;
-    font-size: 24px;
-  }
-
-  input {
-    width: 100%;
-    padding: 14px;
-    border-radius: 12px;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    margin-bottom: 20px;
-    background: #f5eaea;
-    text-align: center;
-  }
-
-  button {
-    width: 100%;
-    padding: 14px;
-    border-radius: 12px;
-    border: none;
-    background: #c94b6a;
-    color: white;
-    font-size: 17px;
-    cursor: pointer;
-    transition: 0.3s ease;
-  }
-
-  button:hover {
-    background: #ff6b88;
-    transform: scale(1.03);
-  }
-
-  .error {
-    margin-top: 15px;
-    color: #ff9aa2;
-    display: none;
-    font-size: 14px;
-  }
+}
 </style>
-
 </head>
+
 <body>
 
 <div class="box">
   <h2>This is just for you 🤍</h2>
-
   <input type="password" id="password" placeholder="Enter the password">
-
   <button onclick="check()">Enter</button>
-
   <div class="error" id="error">Wrong password</div>
 </div>
 
 <script>
 function check() {
   const pwd = document.getElementById("password").value;
-
   if (pwd === "us") {
     window.location.href = "main.html";
   } else {
