@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>You Said Yes</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  font-family: 'Georgia', serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at center, #3a0f1f, #0b0206);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f5eaea;
+  padding: 20px;
+}
+
+/* BIGGER CARD */
+.container {
+  background: rgba(20, 5, 10, 0.85);
+  padding: 40px 25px;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 750px; /* increased */
+  text-align: center;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 17px;
+  opacity: 0.85;
+  margin-bottom: 35px;
+}
+
+/* SIDE BY SIDE ALWAYS */
+.photo-section {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 30px;
+}
+
+/* EACH IMAGE TAKES HALF */
+.photo-item {
+  flex: 1;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.55);
+  background: #000;
+}
+
+/* CALL IMAGE */
+.photo-item.call {
+  max-width: 48%;
+}
+
+.photo-item.call img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+}
+
+/* TOGETHER IMAGE */
+.photo-item.together {
+  max-width: 48%;
+  height: 350px;
+}
+
+.photo-item.together img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ready-link {
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 20px;
+  color: #ff9aa9;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.ready-link:hover {
+  color: #ffd1d8;
+  transform: scale(1.05);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>You said yes.</h1>
+  <div class="subtitle">
+    And I won’t pretend that didn’t make me happy.
+  </div>
+
+  <div class="photo-section">
+    <div class="photo-item call">
+      <img src="call.jpeg" alt="On call together">
+    </div>
+
+    <div class="photo-item together">
+      <img src="together.jpeg" alt="Together">
+    </div>
+  </div>
+
+  <a href="letter.html" class="ready-link">
+    Click this when you’re ready
+  </a>
+</div>
+
+</body>
+</html>
